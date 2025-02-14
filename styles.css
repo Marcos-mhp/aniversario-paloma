@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(45deg, #FF6F61, #FF9A8B);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+}
+
+#container {
+  padding: 30px;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 700px;
+  transition: transform 0.3s ease-in-out;
+}
+
+#container:hover {
+  transform: scale(1.05);
+}
+
+h1 {
+  font-size: 3em;
+  color: #E74C3C;
+}
+
+#contagem {
+  font-size: 4em;
+  margin-top: 20px;
+}
+
+#fogos {
+  font-size: 3em;
+  margin-top: 20px;
+  opacity: 0;
+  transition: opacity 0.5s;
+  animation: fogosAnimation 2s infinite;
+}
+
+#mensagem_final {
+  font-size: 1.5em;
+  margin-top: 20px;
+  color: #000;
+  opacity: 0;
+  transition: opacity 1s ease-in;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hidden {
+  display: none;
+}
+
+p {
+  color: black;
+}
+
+@keyframes fogosAnimation {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+#foto {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  margin: 20px auto;
+  display: block;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#foto.visible {
+  opacity: 1;
+}
