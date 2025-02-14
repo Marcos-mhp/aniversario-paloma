@@ -11,9 +11,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh; /* Usamos min-height para garantir que o body ocupe pelo menos a altura da tela */
   text-align: center;
-  overflow: hidden;
+  padding: 20px; /* Adiciona um espaçamento interno para evitar que o conteúdo encoste nas bordas */
 }
 
 #container {
@@ -23,11 +23,8 @@ body {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   width: 90%;
   max-width: 700px;
-  transition: transform 0.3s ease-in-out;
-}
-
-#container:hover {
-  transform: scale(1.05);
+  margin: 20px auto; /* Adiciona margem para espaçamento */
+  overflow-y: auto; /* Permite rolagem interna se o conteúdo for muito grande */
 }
 
 h1 {
@@ -87,4 +84,27 @@ p {
 
 #foto.visible {
   opacity: 1;
+}
+
+/* Ajustes para telas menores (responsividade) */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2em; /* Reduz o tamanho da fonte do título */
+  }
+
+  #contagem {
+    font-size: 3em; /* Reduz o tamanho da fonte da contagem */
+  }
+
+  #fogos {
+    font-size: 2em; /* Reduz o tamanho da fonte dos fogos */
+  }
+
+  #mensagem_final {
+    font-size: 1.2em; /* Reduz o tamanho da fonte da mensagem final */
+  }
+
+  #foto {
+    width: 150px; /* Reduz o tamanho da foto em dispositivos móveis */
+  }
 }
